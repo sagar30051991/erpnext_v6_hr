@@ -226,7 +226,7 @@ class LeaveApplication(Document):
 				name = get_link_to_form(self.doctype, self.name)
 				employee_name = get_link_to_form("Employee", self.employee, label=employee_name)
 
-			return (_("New Leave Application") + ": %s - " + _("Employee") + ": %s") % (name, employee_name)
+			return (_("New Leave Application") + ": %s - " + _("Employee") + ": %s " + _("From") 	+ ": %s " + _("To") 	+ ": %s 		") % (name, employee_name,self.from_date,self.to_date)
 
 		self.notify({
 			# for post in messages
